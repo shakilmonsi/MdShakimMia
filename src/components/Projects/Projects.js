@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+
+// Helper component to truncate text
+const TruncatedDescription = ({ text, maxLength = 100 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const shouldTruncate = text.length > maxLength;
+  const displayText = isExpanded || !shouldTruncate 
+    ? text 
+    : text.slice(0, maxLength) + "...";
+  
+  return (
+    <div>
+      <p style={{ marginBottom: "10px" }}>{displayText}</p>
+      {shouldTruncate && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#c770f0",
+            cursor: "pointer",
+            textDecoration: "underline",
+            padding: 0,
+            fontSize: "14px"
+          }}
+        >
+          {isExpanded ? "Read less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+};
 
 function Projects() {
   return (
@@ -18,19 +50,60 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Canada Hospital"
-              description="I used everythisng to make this website  :
-              that is  react.js , tailwindcss,daisyui,reactTost, React-router-dom, Firebase
-              React-query, React-Hook-form mongoDb, JWT,  etc-------------"
-          
-              ghLink="https://github.com/shakilmonsi/rochesterUSAmain"
+              title="Cart24"
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, etc"
+                />
+              }
+              demoLink="https://cart24.com/"
+            />
+          </Col>
 
-              demoLink="https://doctorprotailfive-main.web.app"
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Taxiloguk.co.uk"
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, firebase, React-router-dom, role access, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="https://taxiloguk.co.uk/"
+            />
+          </Col>
 
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="CoorDeck"
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: firebase, that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="https://alex.mtscorporate.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Taxiloguk.co.uk"
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="https://taxiloguk.co.uk/"
             />
           </Col>
 
@@ -39,9 +112,11 @@ function Projects() {
               imgPath={bitsOfCode}
               isBlog={false}
               title="NEWS WORLD"
-              description="I used everythisng to  make this website  :
-              that is - JavaScript , API , template operator bootstrap ---dynamic full Project-------------------------"
-              ghLink="https://github.com/shakilmonsi/news-protal"
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is - JavaScript, API, template operator bootstrap - dynamic full Project"
+                />
+              }
               demoLink="https://653aa918d2a14516a7ac599a--clinquant-marzipan-1cb69e.netlify.app/"
             />
           </Col>
@@ -51,45 +126,15 @@ function Projects() {
               imgPath={editor}
               isBlog={false}
               title="Brain-quiz"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
- 
+              description={
+                <TruncatedDescription 
+                  text="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview. Both the editor supports auto save of work using Local Storage"
+                />
+              }
               demoLink="https://stellar-dusk-f19eaa.netlify.app/"
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col> */}
-
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-            // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col> */}
-
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col> */}
         </Row>
       </Container>
     </Container>

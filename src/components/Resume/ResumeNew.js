@@ -48,7 +48,7 @@ const ResumeNew = () => {
           Download Resume   <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "public/md-shakil-mia.pdf",
+      href: "md-shakil-mia.pdf",
       download: true,
     },
   ];

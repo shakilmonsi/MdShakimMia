@@ -7,6 +7,8 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cms from "../Cms";
+import ProjectCounter from "../ProjectCounter";
 
 function About() {
   return (
@@ -35,11 +37,27 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
+
+      <div>
+       
+       
+        <ProjectCounter />
+      </div>
+      <div className="professional_part">
+          <h1 className="project-heading pading_profesilapart" >
           Professional <strong className="purple">Skillset </strong>
         </h1>
        
         <Techstack />
+      </div>
+    <div className="cms_part">
+          
+        <h1 className="project-heading">
+          CMS &  <strong className="purple">E-commerce Expertise </strong>
+        </h1>
+       
+        <Cms />
+    </div>
 
         {/* <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use

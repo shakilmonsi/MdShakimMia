@@ -64,6 +64,19 @@ function Projects() {
               demoLink="https://cart24.com/"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Huurscanner"
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, etc"
+                />
+              }
+              demoLink="https://huurscanner.nl/"
+            />
+          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
@@ -97,13 +110,70 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Taxiloguk.co.uk"
+              title="Appointment "
               description={
                 <TruncatedDescription 
                   text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
                 />
               }
-              demoLink="https://taxiloguk.co.uk/"
+              demoLink="https://doctorprotailfive-main.web.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Feel the Sound "
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="https://beatzingeez.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="للبيع "
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="https://skywalker.mtscorporate.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Luxefashionclothing "
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="https://luxefashionclothing.com/"
+            />
+          </Col>
+       
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Bundoora "
+              description={
+                <TruncatedDescription 
+                  text="I used everything to make this website: that is react.js, tailwindcss, daisyui, reactToast, React-router-dom, Firebase, React-query, React-Hook-form, JWT, stripe, etc"
+                />
+              }
+              demoLink="http://w84sww04ws4s4k0448s8488w.31.97.187.18.sslip.io/"
             />
           </Col>
 

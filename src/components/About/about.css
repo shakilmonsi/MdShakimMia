@@ -18,4 +18,85 @@
       grid-template-columns: repeat(2,1fr); /* Single column for mobile devices */
     }
   }
+
+  .cms_part{
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
   
+  /* ========================================= */
+/* CMS Component Custom Styles         */
+/* ========================================= */
+
+/* ১. ব্যাকগ্রাউন্ড এবং টেক্সট স্টাইল */
+.dark-bg-custom {
+    /* আপনার ছবির মতো গভীর ডার্ক/নেভি কালার */
+    background-color: #160f25; 
+    color: #ffffff;
+}
+
+/* ২. শিরোনাম স্টাইল */
+.title-style-custom {
+    color: #ffffff; /* সাদা টেক্সট */
+    letter-spacing: 1.5px;
+}
+
+.purple-highlight {
+    color: #9333ea; /* উজ্জ্বল বেগুনি হাইলাইট রঙ */
+    text-shadow: 0 0 5px #9333ea; /* সামান্য টেক্সট শ্যাডো */
+}
+
+.techstack-subtitle {
+    color: rgba(255, 255, 255, 0.8); /* হালকা সাদা */
+}
+
+
+/* ৩. স্কিল কার্ড স্টাইল (১০০% নজরকাড়া) */
+.skill-card-custom {
+    /* স্কিল বক্সের ব্যাকগ্রাউন্ড: ছবির আইকনগুলির ডার্ক টোন */
+    background-color: #2c1a45;
+    border: 2px solid #5a3c8c; /* বেগুনি রঙের বর্ডার */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    height: 120px; /* আইকনের সাথে সামঞ্জস্য রাখতে সাইজ নির্দিষ্ট করা হলো */
+}
+
+/* হোভার এফেক্ট (নজরকাড়া ডিজাইন) */
+.skill-card-custom:hover {
+    transform: translateY(-8px); /* উপরে ওঠে যাবে */
+    /* উজ্জ্বল বেগুনি গ্লো শ্যাডো */
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.7), 0 0 5px rgba(147, 51, 234, 0.5);
+    border-color: #9333ea;
+}
+
+/* ৪. আইকন গ্লো এফেক্ট */
+/* React Icons-এর ক্ষেত্রে SVG এলিমেন্টের উপর কাজ করবে */
+.icon-glow {
+    /* আইকন কালার অনুযায়ী গ্লো শ্যাডো তৈরি করা */
+    filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 5px currentColor);
+}
+
+.skill-name-custom {
+    /* টেক্সটকে উজ্জ্বল করার জন্য */
+    color: #e0e0e0 !important;
+}
+
+/* ৫. রেসপনসিভনেস অ্যাডজাস্টমেন্ট (ঐচ্ছিক) */
+@media (max-width: 576px) {
+    .title-style-custom {
+        font-size: 2rem;
+    }
+}
+
+.professional_part{
+  padding-top: 50px;
+}
+.pading_profesilapart{
+  padding-bottom: 20px;
+}
+
+
+.resuming_part{
+  padding-top: 50px;
+}

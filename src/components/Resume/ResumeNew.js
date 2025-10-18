@@ -48,13 +48,13 @@ const ResumeNew = () => {
           Download Resume   <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "md-shakil-mia.pdf",
+      href: "md-shakil-mia-.pdf",
       download: true,
     },
   ];
 
   return (
-    <div name="home" className="xl:h-[90vh] home w-full bg-blue-800 mt-0">
+    <div name="home resuming_part pt-6" className="xl:h-[90vh] home w-full bg-blue-800 mt-[50px] mt-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center xl:h-[90vh] px-4 myinfo xl:ml-56 overflow-hidden pb-24 lg:pb-0 lg:-mt-20 xl:mt-0">
         <div
           className="flex flex-col justify-center h-full info-lg"
@@ -117,9 +117,7 @@ const ResumeNew = () => {
 
         {/* Render profile image for larger screens */}
         <div className=" d-flex justify-content-center">
-        <div  style={{ width: "500px", borderRadius:"100px",
-    background: `url(${mybg})`
-  }}
+        <div  
           data-aos="fade-up"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"

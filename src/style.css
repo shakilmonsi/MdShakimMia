@@ -270,6 +270,21 @@ button:focus {
   text-align: left;
 }
 
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .home-content {
+    padding: 40px 0 !important;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 20px 0 !important;
+  }
+}
+
+
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
@@ -541,7 +556,6 @@ button:focus {
 /* --------- */
 /* About */
 /* --------- */
-
 .about-section {
   position: relative !important;
   padding-top: 150px !important;
@@ -549,6 +563,14 @@ button:focus {
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
+
+/* Tablet and Mobile (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .about-section {
+    padding-top: 40px !important;
+  }
+}
+
 
 .tech-icons {
   font-size: 4.5em !important;

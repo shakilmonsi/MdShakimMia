@@ -73,6 +73,7 @@ const ResumeNew = () => {
           </h2>
 
           {/* Render social media links for smaller screens */}
+          {/* Render social media links for smaller screens */}
           <div className="d-flex justify-content-center   linkedin-social-links">
             {links.map(({ id, child, href, download }) => (
               <button className="bg-primary " key={id}>
